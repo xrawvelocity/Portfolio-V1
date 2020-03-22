@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'archiaregular';
+    src: url('./fonts/archia-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'modernplate';
+    src: url('./fonts/ModernPlate.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    // box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'archiaregular', sans-serif;    
+    scroll-behavior: smooth;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+}
+
+body::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #212121;
+}
+
+body::-webkit-scrollbar
+{
+    width: 7px;
+    background-color: #212121;
+}
+
+body::-webkit-scrollbar-thumb
+{
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #DFDFDF;
+}
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #999;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #999;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #999;
+}
+
+::selection {
+    background-color: #fff;
+    color: #111;
+}
