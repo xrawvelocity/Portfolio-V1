@@ -132,6 +132,7 @@ window.addEventListener('scroll', function (e) {
     ticking = true;
   }
 });
+window.addEventListener('resize', animate(), false);
 var increment = wave.frequency;
 
 function animate() {

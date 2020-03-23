@@ -47,6 +47,7 @@ window.addEventListener('scroll', function(e) {
   }
 });
 
+window.addEventListener('resize', animate(),false)
 
 
 

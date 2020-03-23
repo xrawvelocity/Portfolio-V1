@@ -6,7 +6,6 @@
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss dist/index.css -w",
     "dev": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --mode production --open",
     "build": "webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

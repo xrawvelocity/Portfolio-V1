@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Vic Dev Portfolio</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Victor Fernandez</title>
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
@@ -28,7 +29,7 @@
     <main class="about" id="about">
       <div class="about-main">
         <h1 class="about-main-greeting">Hello!</h1>
-        <h2 class="about-main-name">My name is Victor Fernandez</h2>
+        <h2 class="about-main-name">My name is <br>Victor Fernandez</h2>
         <h2 class="about-main-description">I am a Full Stack Web Developer with a passion for making creative and result-oriented websites</h2>
       </div>
       <div class="about-picture"></div>
@@ -255,7 +256,7 @@
             <a href="https://github.com/xrawvelocity" target="_blank" class="contact-links__github"></a>
         </div>
 
-        <form class="contact-form" action="POST">
+        <form class="contact-form" action="https://formspree.io/xjvojgwr" method="POST">
 
             <div class="contact-form-col-1">
                 <div class="contact-form-group">
@@ -265,12 +266,12 @@
     
                 <div class="contact-form-group">
                     <label class="contact-form-group__label" for="email">Email</label>
-                    <input class="contact-form-group__input" type="email" name="email" id="email" required/>
+                    <input class="contact-form-group__input" type="email" name="_replyto" id="email" required/>
                 </div>
     
                 <div class="contact-form-group">
                     <label class="contact-form-group__label" for="name">Company/Organization</label>
-                    <input class="contact-form-group__input" type="text" name="name" id="name"/>
+                    <input class="contact-form-group__input" type="text" name="company" id="company"/>
                 </div>
             </div>
 
@@ -291,6 +292,7 @@
 <!-- EXTRAS -->
 
 <!-- SINE WAVE BACKGROUND -->
+
     <canvas></canvas>
     
 
@@ -322,6 +324,7 @@
               window.location.hash = "#projects3"
           }
       });
+
     </script>
   <script type="text/javascript" src="./js/canvas.bundle.js"></script></body>
 </html>

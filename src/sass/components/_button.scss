@@ -7,10 +7,14 @@
         padding: 1.5rem 4rem;
         display: inline-block;
         // margin-top: 6rem;
-        border-radius: 10rem;
+        border-radius: 3px;
         font-size: $default-font-size;
         transition: all .2s ease-in-out;
         position: relative;
+
+        @include respond(phone){
+            font-size: 2.4rem;
+        }
 
         &::after{
             content: "";

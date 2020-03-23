@@ -13,6 +13,10 @@
     background-color: rgba(0,0,0,0.9);
     width: 100%;
 
+    @include respond(phone){
+        font-size: 4rem;
+        padding: 5% 0;
+    }
 
     &-left {
         
@@ -39,6 +43,11 @@
     &-logo {
         font-family: 'modernplate';
         padding: .7rem 5rem 0;
+
+        @include respond(phone){
+            padding: 1.3rem 5rem 0;
+        }
+
         &,
         &:link,
         &:visited {
