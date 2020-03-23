@@ -1,3 +1,21 @@
+/*
+0-600px = phone
+600-900px = tablet portait
+900-1200px = tablet landscape
+1200-1800px = normal desktop
+1800px+ = big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid >  page layout > components
+
+1rem = 10px = 62.5% font size
+1em = 16px
+*/
 @font-face {
   font-family: 'archiaregular';
   src: url("./fonts/archia-regular-webfont.ttf") format("truetype");
@@ -18,6 +36,18 @@ html {
   font-size: 62.5%;
   font-family: 'archiaregular', sans-serif;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 60%;
+      overflow-x: hidden; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%;
+      overflow-x: hidden; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 40%;
+      overflow-x: hidden; } }
 
 canvas {
   position: fixed;
@@ -57,24 +87,6 @@ body::-webkit-scrollbar-thumb {
   background-color: #fff;
   color: #111; }
 
-/*
-0-600px = phone
-600-900px = tablet portait
-900-1200px = tablet landscape
-1200-1800px = normal desktop
-1800px+ = big desktop
-
-$breakpoint argument choices:
-- phone
-- tab-port
-- tab-land
-- big-desktop
-
-ORDER: Base + typography > general layout + grid >  page layout > components
-
-1rem = 10px = 62.5% font size
-1em = 16px
-*/
 .nav {
   font-size: 3rem;
   color: #eee;
@@ -94,6 +106,9 @@ ORDER: Base + typography > general layout + grid >  page layout > components
     text-transform: lowercase; }
   .nav-left:hover {
     color: #fff; }
+  .nav-left:active, .nav-left:focus {
+    color: #ddd;
+    outline: none; }
   .nav-logo {
     font-family: 'modernplate';
     padding: .7rem 5rem 0; }
@@ -105,6 +120,9 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       letter-spacing: 3px; }
     .nav-logo:hover {
       color: #fff; }
+    .nav-logo:active, .nav-logo:focus {
+      color: #ddd;
+      outline: none; }
   .nav-right, .nav-right:link, .nav-right:visited {
     color: #bbb;
     text-decoration: none;
@@ -126,7 +144,10 @@ ORDER: Base + typography > general layout + grid >  page layout > components
     display: flex;
     flex-direction: column;
     width: 80rem;
-    padding: 10rem 0 15rem; }
+    padding: 5rem 0 10rem; }
+    @media only screen and (max-width: 30em) {
+      .about-main {
+        width: 40rem; } }
     .about-main > * {
       padding: 2rem 0; }
     .about-main-greeting {
@@ -135,20 +156,33 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       font-size: 3rem; }
     .about-main-description {
       font-size: 2.8rem; }
+      @media only screen and (max-width: 30em) {
+        .about-main-description {
+          padding-bottom: 12rem; } }
   .about-picture {
     background-image: url("./images/newnewheadshot.jpg");
     background-size: cover;
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    margin-bottom: 20rem; }
+    margin-bottom: 10rem; }
+    @media only screen and (max-width: 30em) {
+      .about-picture {
+        height: 100px;
+        width: 100px;
+        margin-bottom: 25rem; } }
 
 .projects {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .projects-title {
+    color: #ddd;
+    font-size: 4.5rem;
+    margin: 10rem auto -10rem; }
 
 .contact {
   height: 100vh;
@@ -162,7 +196,10 @@ ORDER: Base + typography > general layout + grid >  page layout > components
     flex-direction: column;
     align-items: center;
     color: #eee;
-    margin: 20rem 0 0rem; }
+    margin: 15rem 0 0; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-text {
+        margin: 5rem 0 0; } }
     .contact-text__title {
       font-size: 4rem; }
     .contact-text__paragraph {
@@ -171,7 +208,8 @@ ORDER: Base + typography > general layout + grid >  page layout > components
     width: 60rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    margin-bottom: -10rem; }
     .contact-links__linkedin, .contact-links__linkedin:link, .contact-links__linkedin:visited {
       width: 50px;
       height: 50px;
@@ -180,9 +218,17 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       background-repeat: no-repeat;
       background-position: center;
       transition: all .1s ease-in-out; }
+      @media only screen and (max-width: 37.5em) {
+        .contact-links__linkedin, .contact-links__linkedin:link, .contact-links__linkedin:visited {
+          width: 35px;
+          height: 35px; } }
     .contact-links__linkedin:hover {
       transform: scale(1.1);
       cursor: pointer; }
+    .contact-links__linkedin::after {
+      content: "";
+      display: table;
+      clear: both; }
     .contact-links__resume, .contact-links__resume:link, .contact-links__resume:visited {
       background-color: #fff;
       color: #111;
@@ -207,29 +253,42 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       background-repeat: no-repeat;
       background-position: center;
       transition: all .1s ease-in-out; }
+      @media only screen and (max-width: 37.5em) {
+        .contact-links__github, .contact-links__github:link, .contact-links__github:visited {
+          width: 35px;
+          height: 35px; } }
     .contact-links__github:hover {
       transform: scale(1.1);
       cursor: pointer; }
+    .contact-links__github::after {
+      content: "";
+      display: table;
+      clear: both; }
   .contact-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 5rem 20rem;
+    margin: 12rem 15rem 12rem 5rem;
     font-size: 2.6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact-form {
+        flex-direction: column;
+        margin: 10rem 15rem 5rem 5rem; } }
     .contact-form-col-1 {
-      width: 50rem;
+      width: 40rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       margin-left: 10rem; }
     .contact-form-col-2 {
+      width: 40rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 6rem;
+      margin-top: 0rem;
       margin-left: 10rem; }
     .contact-form-group {
       width: 100%;
@@ -252,9 +311,12 @@ ORDER: Base + typography > general layout + grid >  page layout > components
         color: #eee;
         border: 1px solid #111;
         border-radius: 3px;
-        height: 250px;
+        height: 185px;
         padding: 1.5rem 2rem;
         font-size: 2.8rem; }
+        @media only screen and (max-width: 37.5em) {
+          .contact-form-group__textarea {
+            height: 100px; } }
     .contact-form-button {
       background-color: #fff;
       color: #111;
@@ -330,11 +392,16 @@ ORDER: Base + typography > general layout + grid >  page layout > components
     box-shadow: 0 1rem 3rem #000;
     color: #000;
     background-color: #fff;
-    display: table;
+    display: flex;
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all .5s; }
+    @media only screen and (max-width: 56.25em) {
+      .popup__content {
+        opacity: 0;
+        flex-direction: column;
+        height: 60vh; } }
   .popup__left {
     width: 100%;
     height: 500px;
@@ -361,46 +428,22 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       height: 100%;
       background-repeat: no-repeat;
       background-position: center; }
-    @media only screen and (max-width: 75em) {
-      .popup__left {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        object-fit: cover;
-        height: auto; } }
-    @media only screen and (max-width: 56.25em) {
-      .popup__left {
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        object-fit: cover;
-        height: auto; } }
-    @media only screen and (max-width: 37.5em) {
-      .popup__left {
-        display: none; } }
   .popup__right {
     width: 35%;
-    display: table-cell;
-    padding: 3rem 5rem;
-    vertical-align: middle; }
-    @media only screen and (max-width: 75em) {
-      .popup__right {
-        display: inline-block;
-        padding: 5rem;
-        width: 100%;
-        position: relative; } }
+    display: inline-block;
+    padding: 10rem 5rem; }
     @media only screen and (max-width: 56.25em) {
       .popup__right {
-        display: inline-block;
-        padding: 5rem;
         width: 100%;
-        position: relative; } }
+        padding: 1rem;
+        text-align: center; } }
     @media only screen and (max-width: 37.5em) {
       .popup__right {
-        width: 100%; }
-        .popup__right .heading-secondary {
-          font-size: 2rem;
-          letter-spacing: 0; } }
+        padding: 1rem 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column; } }
   .popup__img {
     display: block;
     width: 100%; }
@@ -411,71 +454,25 @@ ORDER: Base + typography > general layout + grid >  page layout > components
   .popup__text {
     font-size: 1.6rem;
     margin-bottom: 4rem; }
-    .popup__text--dots {
-      display: none; }
-      @media only screen and (max-width: 75em) {
-        .popup__text--dots {
-          display: none; } }
-      @media only screen and (max-width: 56.25em) {
-        .popup__text--dots {
-          display: inline; } }
-      @media only screen and (max-width: 37.5em) {
-        .popup__text--dots {
-          display: inline; } }
-    .popup__text--more {
-      display: inline; }
-      @media only screen and (max-width: 75em) {
-        .popup__text--more {
-          display: inline; } }
-      @media only screen and (max-width: 56.25em) {
-        .popup__text--more {
-          display: none; } }
-      @media only screen and (max-width: 37.5em) {
-        .popup__text--more {
-          display: none; } }
-    @media only screen and (max-width: 56.25em) {
-      .popup__text {
-        column-count: 1; } }
     @media only screen and (max-width: 37.5em) {
       .popup__text {
-        column-count: 1; } }
+        width: 80%;
+        text-align: center; } }
   .popup__text-button {
-    display: flex;
-    flex-direction: column; }
-  .popup__readbtn {
-    display: none;
-    background-color: #eee;
-    color: #777;
-    border: 0;
-    padding: .5rem 1rem; }
+    display: flex; }
     @media only screen and (max-width: 56.25em) {
-      .popup__readbtn {
-        display: inline;
-        width: 30%;
-        margin-bottom: 5rem;
-        cursor: pointer;
-        transition: all .1s; }
-        .popup__readbtn:hover {
-          transform: translateY(-0.3rem);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-        .popup__readbtn:active, .popup__readbtn:focus {
-          outline: none;
-          transform: translateY(-0.1rem);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); } }
-    @media only screen and (max-width: 37.5em) {
-      .popup__readbtn {
-        display: inline;
-        width: 60%;
-        margin-bottom: 5rem;
-        cursor: pointer;
-        transition: all .1s; }
-        .popup__readbtn:hover {
-          transform: translateY(-0.3rem);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-        .popup__readbtn:active, .popup__readbtn:focus {
-          outline: none;
-          transform: translateY(-0.1rem);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); } }
+      .popup__text-button {
+        justify-content: center; } }
+    .popup__text-button > *::after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media only screen and (max-width: 75em) {
+      .popup__text-button > * {
+        padding: 1rem 2rem !important; } }
+    @media only screen and (max-width: 56.25em) {
+      .popup__text-button > * {
+        margin: 2rem !important; } }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -510,6 +507,10 @@ ORDER: Base + typography > general layout + grid >  page layout > components
   justify-content: space-evenly;
   width: 100%;
   padding-top: 20rem; }
+  @media only screen and (max-width: 30em) {
+    .all-cards {
+      grid-template-columns: repeat(auto-fit, 300px);
+      width: 90%; } }
 
 .card {
   perspective: 120rem;
@@ -519,6 +520,9 @@ ORDER: Base + typography > general layout + grid >  page layout > components
   margin: 5rem auto; }
   .card-container {
     width: 350px; }
+    @media only screen and (max-width: 30em) {
+      .card-container {
+        width: 300px; } }
   .card__side {
     height: 48rem;
     transition: all .8s ease;
@@ -537,7 +541,7 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       .card__side--back-1 {
         background-image: linear-gradient(120deg, rgba(0, 57, 82, 0.9), #042635); }
       .card__side--back-2 {
-        background-image: linear-gradient(120deg, rgba(255, 165, 0, 0.9), orange); }
+        background-image: linear-gradient(120deg, rgba(51, 51, 51, 0.9), #333333); }
       .card__side--back-3 {
         background-image: linear-gradient(120deg, rgba(5, 142, 151, 0.9), #09757b); }
   .card:hover .card__side--front {
@@ -568,22 +572,38 @@ ORDER: Base + typography > general layout + grid >  page layout > components
     display: flex;
     justify-content: space-evenly;
     align-items: center; }
+    @media only screen and (max-width: 30em) {
+      .card__heading {
+        top: 11rem; } }
   .card__heading-image {
     display: inline-block;
-    background-size: cover; }
+    background-size: contain;
+    background-repeat: no-repeat; }
     .card__heading-image--1 {
       width: 150px;
       height: 100px;
       background-image: url("./images/laptop-bg-landing.png");
       animation: float 3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s infinite; }
+      @media only screen and (max-width: 30em) {
+        .card__heading-image--1 {
+          width: 100px;
+          height: 60px; } }
     .card__heading-image--2 {
       width: 100px;
       height: 110px;
       background-image: url("./images/sanspicBareLogo.svg"); }
+      @media only screen and (max-width: 30em) {
+        .card__heading-image--2 {
+          width: 70px;
+          height: 80px; } }
     .card__heading-image--3 {
       width: 100px;
       height: 100px;
       background-image: url("./images/newsupervisor.gif"); }
+      @media only screen and (max-width: 30em) {
+        .card__heading-image--3 {
+          width: 70px;
+          height: 70px; } }
   .card__heading-span {
     padding: .5rem;
     -webkit-box-decoration-break: clone;
@@ -605,10 +625,19 @@ ORDER: Base + typography > general layout + grid >  page layout > components
       .card__details ul li {
         text-align: center;
         font-size: 1.5rem;
-        padding: 1rem 0rem 1rem 3rem;
+        padding: 1rem 1rem 1rem 3rem;
         display: flex;
         align-items: center;
-        justify-content: center; }
+        justify-content: flex-end; }
+        @media only screen and (max-width: 75em) {
+          .card__details ul li {
+            padding: 1rem 1rem 1rem 3rem; } }
+        @media only screen and (max-width: 56.25em) {
+          .card__details ul li {
+            padding: 1rem 1rem 1rem 3rem; } }
+        @media only screen and (max-width: 37.5em) {
+          .card__details ul li {
+            padding: 1rem 4rem 1rem 3rem; } }
         .card__details ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
         .card__details ul li span {
@@ -616,6 +645,9 @@ ORDER: Base + typography > general layout + grid >  page layout > components
           width: 20px;
           height: 20px;
           display: inline-block; }
+          @media only screen and (max-width: 37.5em) {
+            .card__details ul li span {
+              padding-left: 7rem; } }
     .card__details-logo-react {
       background-image: url("./images/logos/reactjslogo.png");
       background-size: contain;
@@ -694,6 +726,9 @@ ORDER: Base + typography > general layout + grid >  page layout > components
   .card__price-only {
     font-size: 2rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 30em) {
+      .card__price-only {
+        padding: 0 3rem; } }
   .card__price-value {
     font-size: 6rem;
     font-weight: 200; }
@@ -709,11 +744,11 @@ ORDER: Base + typography > general layout + grid >  page layout > components
         box-shadow: none; }
         .card__side--back {
           transform: rotateY(0);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%); }
+          clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
       .card:hover .card__side--front {
         transform: rotateY(0); }
       .card__details {
-        padding: 1rem 3rem; }
+        padding: 3rem; }
       .card__cta {
         position: relative;
         top: 0;
@@ -744,11 +779,15 @@ ORDER: Base + typography > general layout + grid >  page layout > components
   display: inline-block;
   border-radius: 10rem;
   font-size: 1.8rem;
-  transition: all .1s;
+  transition: all .2s ease-in-out;
   position: relative; }
+  .btn::after, .btn:link::after, .btn:visited::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 .btn:hover {
-  transform: translateY(-0.3rem);
+  transform: translateY(-0.2rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active, .btn:focus {
@@ -763,7 +802,14 @@ ORDER: Base + typography > general layout + grid >  page layout > components
 .btn--gray {
   background-image: linear-gradient(to right bottom, rgba(51, 51, 51, 0.85), rgba(34, 34, 34, 0.85));
   color: #fff;
-  margin: 5rem 2rem -5rem; }
+  margin: 5rem 2rem -5rem;
+  transition: all .2s ease-in-out; }
+  .btn--gray::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .btn--gray:hover {
+    background-image: linear-gradient(to right bottom, rgba(68, 68, 68, 0.85), rgba(51, 51, 51, 0.85)); }
 
 .btn--animated {
   animation: moveInBottom 1s ease-out .75s;
@@ -776,11 +822,11 @@ ORDER: Base + typography > general layout + grid >  page layout > components
   border-bottom: 1px solid #222;
   padding: 4px;
   font-size: 1.8rem;
-  transition: all .2s; }
+  transition: all .2s ease-in-out; }
 
 .btn-text:hover {
-  background-color: #222;
-  transform: translateY(-3px);
+  background-color: #333;
+  transform: translateY(-2px);
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 

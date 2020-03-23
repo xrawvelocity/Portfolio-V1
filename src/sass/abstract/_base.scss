@@ -22,6 +22,19 @@ html {
     font-size: 62.5%;
     font-family: 'archiaregular', sans-serif;    
     scroll-behavior: smooth;
+
+    @include respond(tab-port){
+        font-size: 60%;
+        overflow-x: hidden;
+    }
+    @include respond(phone){
+        font-size: 50%;
+        overflow-x: hidden;
+    }
+    @include respond(smallphone){
+        font-size: 40%;
+        overflow-x: hidden;
+    }
 }
 
 canvas {

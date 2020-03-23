@@ -29,8 +29,10 @@
             color: #fff;
         }
 
-        &:active {
-
+        &:active,
+        &:focus {
+            color: #ddd;
+            outline: none;
         }
     }
 
@@ -51,8 +53,10 @@
             color: #fff;
         }
 
-        &:active {
-
+        &:active,
+        &:focus {
+            color: #ddd;
+            outline: none;
         }
     }
 

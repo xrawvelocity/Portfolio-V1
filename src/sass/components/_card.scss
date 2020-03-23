@@ -5,6 +5,11 @@
     width: 100%;
     padding-top: 20rem;
 
+    @include respond(smallphone){
+        grid-template-columns: repeat(auto-fit, 300px);
+        width: 90%;   
+    }
+
 }
 
 .card {
@@ -17,6 +22,9 @@
     &-container {
         width: 350px;
         
+        @include respond(smallphone){
+            width: 300px;
+        }
     }
 
     &__side {
@@ -46,8 +54,8 @@
             }
 
             &-2 {
-                background-image: linear-gradient(120deg, rgba($color-primary-3,.9),
-                rgba($color-primary-3,1));
+                background-image: linear-gradient(120deg, rgba($color-gray-dark-3,.9),
+                rgba($color-gray-dark-3,1));
             }
 
             &-3 {
@@ -99,27 +107,48 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+
+        @include respond(smallphone){
+            top: 11rem;
+        }
     }
 
     &__heading-image {
         display: inline-block;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
 
         &--1{
             width: 150px;
             height: 100px;
             background-image: url('./images/laptop-bg-landing.png');
             animation: float 3s cubic-bezier(0.645, 0.045, 0.355, 1) .1s infinite;
+
+            @include respond(smallphone){
+                width: 100px;
+                height: 60px;
+            }
         }
         &--2{
             width: 100px;
             height: 110px;
             background-image: url('./images/sanspicBareLogo.svg');
+
+            @include respond(smallphone){
+                width: 70px;
+                height: 80px;
+            }
         }
         &--3{
             width: 100px;
             height: 100px;
             background-image: url('./images/newsupervisor.gif');
+
+            @include respond(smallphone){
+                width: 70px;
+                height: 70px;
+                
+            }
         }
     }
 
@@ -151,10 +180,22 @@
             li {
                 text-align: center;
                 font-size: 1.5rem;
-                padding: 1rem 0rem 1rem 3rem;
+                padding: 1rem 1rem 1rem 3rem;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-end;
+
+                @include respond(tab-land){
+                    padding: 1rem 1rem 1rem 3rem;
+                }
+
+                @include respond(tab-port){
+                    padding: 1rem 1rem 1rem 3rem;
+                }
+
+                @include respond(phone){
+                    padding: 1rem 4rem 1rem 3rem;
+                }
 
                 &:not(:last-child){
                     border-bottom: 1px solid $color-gray-light-2;
@@ -165,6 +206,11 @@
                     width: 20px;
                     height: 20px;
                     display: inline-block;
+
+
+                    @include respond(phone){
+                        padding-left: 7rem;
+                    }
                 }
             }
         }
@@ -285,6 +331,10 @@
     &__price-only{
         font-size: 2rem;
         text-transform: uppercase;
+
+        @include respond(smallphone){
+            padding: 0 3rem;   
+        }
     }
 
     &__price-value{
@@ -310,7 +360,7 @@
             
             &--back {
                 transform: rotateY(0);
-                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
             }
         }
 
@@ -319,7 +369,7 @@
         }
 
         &__details {
-            padding: 1rem 3rem;
+            padding: 3rem;
         }
         
 

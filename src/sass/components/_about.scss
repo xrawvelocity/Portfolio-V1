@@ -15,7 +15,11 @@
         display: flex;
         flex-direction: column;
         width: 80rem;
-        padding: 10rem 0 15rem;
+        padding: 5rem 0 10rem;
+
+        @include respond(smallphone){
+            width: 40rem;
+        }
 
         & > * {
             padding: 2rem 0;
@@ -31,6 +35,9 @@
 
         &-description {
             font-size: 2.8rem;
+            @include respond(smallphone){
+                padding-bottom: 12rem;
+            }
         }
     }
 
@@ -40,6 +47,12 @@
         height: 200px;
         width: 200px;
         border-radius: 50%;
-        margin-bottom: 20rem
+        margin-bottom: 10rem;
+
+        @include respond(smallphone){
+            height: 100px;
+            width: 100px;
+            margin-bottom: 25rem;
+        }
     }
 }

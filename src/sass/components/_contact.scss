@@ -14,7 +14,11 @@
         flex-direction: column;
         align-items: center;
         color: #eee;
-        margin: 20rem 0 0rem;
+        margin: 15rem 0 0;
+
+        @include respond(phone){
+            margin: 5rem 0 0; 
+        }
 
         &__title {
             font-size: 4rem;
@@ -30,6 +34,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin-bottom: -10rem;
 
         &__linkedin {
 
@@ -43,10 +48,20 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 transition: all .1s ease-in-out;
+
+                @include respond(phone){
+                    width: 35px;
+                    height: 35px;
+                }
             }
             &:hover {
                 transform: scale(1.1);
                 cursor: pointer;
+            }
+            &::after{
+                content: "";
+                display: table;
+                clear: both;
             }
         }
 
@@ -87,10 +102,21 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 transition: all .1s ease-in-out;
+
+                @include respond(phone){
+                    width: 35px;
+                    height: 35px;
+                }
             }
             &:hover {
                 transform: scale(1.1);
                 cursor: pointer;
+            }
+
+            &::after{
+                content: "";
+                display: table;
+                clear: both;
             }
         }
     }
@@ -102,13 +128,18 @@
         justify-content: center;
         align-items: center;
         
-        margin: 5rem 20rem;
+        margin: 12rem 15rem 12rem 5rem;
         font-size: 2.6rem;
+
+        @include respond(phone){
+            flex-direction: column;
+            margin: 10rem 15rem 5rem 5rem;
+        }
 
         &-col {
             &-1{
                 
-                width: 50rem;
+                width: 40rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -118,12 +149,12 @@
             }
             &-2{
 
-                
+                width: 40rem;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                margin-top: 6rem;
+                margin-top: 0rem;
                 margin-left: 10rem;
 
             }
@@ -157,9 +188,13 @@
                 color: #eee;
                 border: 1px solid #111;
                 border-radius: 3px;
-                height: 250px;
+                height: 185px;
                 padding: 1.5rem 2rem;
                 font-size: 2.8rem;
+
+                @include respond(phone){
+                    height: 100px;
+                }
             }
         }
 

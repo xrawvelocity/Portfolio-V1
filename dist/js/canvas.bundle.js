@@ -118,10 +118,7 @@ var last_known_scroll_position = 0;
 var ticking = false;
 
 function doSomething(scroll_pos) {
-  console.log(document.body.offsetHeight);
-  console.log("-=-=-=-=-", scroll_pos);
-  strokeColor.h = Math.floor(scroll_pos / (document.body.offsetHeight - 1000) * 255);
-  console.log(strokeColor.h);
+  strokeColor.h = Math.floor(scroll_pos / (document.body.offsetHeight - 700) * 255);
 }
 
 window.addEventListener('scroll', function (e) {
