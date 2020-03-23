@@ -3,7 +3,7 @@ const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
 
 canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.height = innerHeight + 100;
 
 const wave = {
   y: canvas.height /2,
