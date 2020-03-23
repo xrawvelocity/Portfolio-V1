@@ -1,8 +1,12 @@
 @import './abstract/base';
+@import './abstract/mixins';
 @import './abstract/variables';
 
 @import './components/nav';
 @import './components/about';
 @import './components/projects';
 @import './components/contact';
-@import './components/scrollAnim';
+@import './components/scrollAnim'; 
+@import './components/popup';
+@import './components/card';
+@import './components/button';

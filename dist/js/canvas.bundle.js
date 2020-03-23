@@ -90,14 +90,8 @@
 /*!**************************!*\
   !*** ./src/js/canvas.js ***!
   \**************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ "./src/js/utils.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_utils__WEBPACK_IMPORTED_MODULE_0__);
-/* jshint esversion: 9 */
+/*! no static exports found */
+/***/ (function(module, exports) {
 
 var canvas = document.querySelector('canvas');
 var c = canvas.getContext('2d');
@@ -106,12 +100,12 @@ canvas.height = innerHeight;
 var wave = {
   y: canvas.height / 2,
   length: 0.01,
-  amplitude: 100,
-  frequency: 0.01
+  amplitude: 75,
+  frequency: 0.012
 };
 var strokeColor = {
   h: 0,
-  s: 0,
+  s: 100,
   l: 50
 };
 var bgColor = {
@@ -120,6 +114,27 @@ var bgColor = {
   b: 0,
   a: 0.02
 };
+var last_known_scroll_position = 0;
+var ticking = false;
+
+function doSomething(scroll_pos) {
+  console.log(document.body.offsetHeight);
+  console.log("-=-=-=-=-", scroll_pos);
+  strokeColor.h = Math.floor(scroll_pos / (document.body.offsetHeight - 1000) * 255);
+  console.log(strokeColor.h);
+}
+
+window.addEventListener('scroll', function (e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function () {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
 var increment = wave.frequency;
 
 function animate() {
@@ -130,45 +145,15 @@ function animate() {
   c.moveTo(0, canvas.height / 2);
 
   for (var i = 0; i < canvas.width; i++) {
-    c.lineTo(i, wave.y + Math.sin(i * wave.length + increment) * wave.amplitude * Math.sin(increment));
+    c.lineTo(i, wave.y + Math.cos(i * wave.length + increment) * wave.amplitude * Math.cos(increment));
   }
 
-  c.strokeStyle = "hsl(".concat(Math.abs(strokeColor.h * Math.sin(increment)), ", ").concat(strokeColor.s, "%, ").concat(strokeColor.l, "%)");
+  c.strokeStyle = "hsl(".concat(Math.abs(strokeColor.h), ", ").concat(strokeColor.s, "%, ").concat(strokeColor.l, "%)");
   c.stroke();
   increment += wave.frequency;
 }
 
 animate();
-
-/***/ }),
-
-/***/ "./src/js/utils.js":
-/*!*************************!*\
-  !*** ./src/js/utils.js ***!
-  \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* jshint esversion: 9 */
-function randomIntFromRange(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function randomColor(colors) {
-  return colors[Math.floor(Math.random() * colors.length)];
-}
-
-function distance(x1, y1, x2, y2) {
-  var xDist = x2 - x1;
-  var yDist = y2 - y1;
-  return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
-}
-
-module.exports = {
-  randomIntFromRange: randomIntFromRange,
-  randomColor: randomColor,
-  distance: distance
-};
 
 /***/ })
 

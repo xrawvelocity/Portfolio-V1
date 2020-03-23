@@ -1,5 +1,3 @@
-/* jshint esversion: 9 */
-import utils from './utils';
 
 const canvas = document.querySelector('canvas');
 const c = canvas.getContext('2d');
@@ -10,13 +8,13 @@ canvas.height = innerHeight;
 const wave = {
   y: canvas.height /2,
   length: 0.01,
-  amplitude: 100,
-  frequency: 0.01
+  amplitude: 75,
+  frequency: 0.012
 };
 
 const strokeColor = {
   h: 0,
-  s: 0,
+  s: 100,
   l: 50
 };
 
@@ -26,6 +24,34 @@ const bgColor = {
   b: 0,
   a: 0.02
 };
+
+
+let last_known_scroll_position = 0;
+let ticking = false;
+
+function doSomething(scroll_pos) {
+  console.log(document.body.offsetHeight)
+  console.log("-=-=-=-=-", scroll_pos)
+  strokeColor.h = Math.floor(scroll_pos / (document.body.offsetHeight - 1000) * 255)
+  console.log(strokeColor.h)
+  
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+
+
+
 
 let increment = wave.frequency;
 function animate() {
@@ -37,9 +63,9 @@ function animate() {
   c.moveTo(0,canvas.height /2);
 
   for(let i = 0; i < canvas.width; i++){
-    c.lineTo(i, wave.y + Math.sin(i * wave.length + increment) * wave.amplitude * Math.sin(increment));
+    c.lineTo(i, wave.y + Math.cos(i * wave.length + increment) * wave.amplitude * Math.cos(increment));
   }
-  c.strokeStyle = `hsl(${Math.abs(strokeColor.h * Math.sin(increment))}, ${strokeColor.s}%, ${strokeColor.l}%)`;
+  c.strokeStyle = `hsl(${Math.abs(strokeColor.h)}, ${strokeColor.s}%, ${strokeColor.l}%)`;
   c.stroke();
   
   increment += wave.frequency;

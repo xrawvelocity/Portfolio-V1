@@ -6,17 +6,26 @@
     <link rel="stylesheet" href="./index.css">
   </head>
   <body>
+
+
+
+
     <nav class="nav">
       <a href="#projects" class="nav-left">Projects</a>
       <a href="#about" class="nav-logo">VD</a>
       <a href="#contact" class="nav-right">Contact</a>
     </nav>
 
+
+
+
+
+
     <main class="about" id="about">
       <div class="about-main">
         <h1 class="about-main-greeting">Hello!</h1>
         <h2 class="about-main-name">My name is Victor Fernandez</h2>
-        <h2 class="about-main-description">I am a Full Stack Web Developer with a passion for making creative and funtional websites</h2>
+        <h2 class="about-main-description">I am a Full Stack Web Developer with a passion for making creative and outcome-oriented websites</h2>
       </div>
       <div class="about-picture"></div>
       <a href="#projects" class="arrow">
@@ -26,14 +35,281 @@
       </a>
     </main>
 
+
+<!-- ------------------------------------ -->
+
+<!-- PORJECT CARDS -->
+
+
+
     <section class="projects" id="projects">
-      Projects
+      <div class="all-cards">
+        
+
+<!-- LIVESTYLE CARD -->
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card__side card__side--front">
+                <div class="card__picture card__picture--2">
+                    &nbsp;
+                </div>
+                <h4 class="card__heading">
+                    <span class="card__heading-image card__heading-image--2"></span>
+                    <span class="card__heading-span card__heading-span--2">Live Style</span>
+                </h4>
+                <div class="card__details">
+                    <ul>
+                        <li>React.js <span class="card__details-logo-react"></span></li>
+                        <li>Express.js <span class="card__details-logo-express"></span></li>
+                        <li>SASS <span class="card__details-logo-sass"></span></li>
+                        <li>Cheerio <span class="card__details-logo-cheerio"></span></li>
+                        <li>AJAX <span class="card__details-logo-ajax"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-2">
+                <div class="card__cta">
+                    <div class="card__price-box">
+                        <p class="card__price-only">Single-page web app built with React. Uses custom
+                            Amazon Web Scrape and YouTube API to recommend
+                            specific videos and products to the users.</p>
+                        
+                    </div>
+                    <a href="#popup2" id="bookBtn" class="btn btn--white">More Info</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+<!-- TRACKTRADE CARD -->
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card__side card__side--front">
+                <div class="card__picture card__picture--1">
+                    &nbsp;
+                </div>
+                <h4 class="card__heading">
+                    <span class="card__heading-image card__heading-image--1"></span>
+                    <span class="card__heading-span card__heading-span--1">Track Trade</span>
+                </h4>
+                <div class="card__details">
+                    <ul>
+                        <li>MongoDB <span class="card__details-logo-mongo"></span></li>
+                        <li>Express.js <span class="card__details-logo-express"></span></li>
+                        <li>React.js <span class="card__details-logo-react"></span></li>
+                        <li>Node.js <span class="card__details-logo-node"></span></li>
+                        <li>CanvasJSCharts <span class="card__details-logo-canvas"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-1">
+                <div class="card__cta">
+                    <div class="card__price-box">
+                        <p class="card__price-only">Social media for Foreign Exchange Traders that allows
+                            users to visualize their performance using charts.</p>
+                        
+                    </div>
+                    <a href="#popup" id="bookBtn" class="btn btn--white">More Info</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+<!-- SUPERSUPERVISOR CARD -->
+
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card__side card__side--front">
+                <div class="card__picture card__picture--3">
+                    &nbsp;
+                </div>
+                <h4 class="card__heading">
+                    <span class="card__heading-image card__heading-image--3"></span>
+                    <span class="card__heading-span card__heading-span--3">Super Supervisor</span>
+                </h4>
+                <div class="card__details">
+                    <ul>
+                        <li>HTML Canvas <span class="card__details-logo-html"></span></li>
+                        <li>Phaser3 <span class="card__details-logo-phaser"></span></li>
+                        <li>TiledMapEditor <span class="card__details-logo-tiled"></span></li>
+                        <li>JavaScript <span class="card__details-logo-js"></span></li>
+                        <li>Adobe Photoshop <span class="card__details-logo-ps"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+                <div class="card__cta">
+                    <div class="card__price-box">
+                        <p class="card__price-only">Web-based canvas game built with the Phaser 3 library.</p>
+                        
+                    </div>
+                    <a href="#popup3" id="bookBtn" class="btn btn--white">More Info</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+
+<!-- HIDDEN POPUPS -->
+
+<!-- TRACKTRADE POPUP -->
+    <div class="popup" id="popup">
+        <div class="popup__content" id="content">
+            <div class="popup__left">
+                <div class="popup__left-1"></div>
+            </div>
+            <div class="popup__right">
+                <a href="#projects" class="popup__close">&times;</a>
+                <h2 class="popup__heading">Track Trade</h2>
+
+                <div class="popup__text-button">
+                    <p class="popup__text">Log your trades, analyze charts, share your trades on social media, message other users, and connect with other traders.</p>
+                </div>
+                <a href="https://tracktrade.co/" target="_blank" class="btn btn--gray">Demo</a>
+                <a href="https://github.com/TrackTraders/TrackTrade" target="_blank" class="btn btn--gray">Code</a>
+            </div>
+        </div>
+    </div>
+
+<!-- LIVESTYLE POPUP -->
+
+    <div class="popup" id="popup2">
+        <div class="popup__content" id="content">
+            <div class="popup__left">
+                <div class="popup__left-2"></div>
+            </div>
+            <div class="popup__right">
+                <a href="#projects" class="popup__close">&times;</a>
+                <h2 class="popup__heading">Live Style</h2>
+
+                <div class="popup__text-button">
+                    <p class="popup__text">Implement any lifestyle any lifestyle you want by keeping up with the latest videos and products, save any video or product to access them later, and search through your saved lists.</p>
+                </div>
+                <a href="https://livestyle.netlify.com" target="_blank" class="btn btn--gray">Demo</a>
+                <a href="https://github.com/xrawvelocity/LiveStyle" target="_blank" class="btn btn--gray">Code</a>
+            </div>
+        </div>
+    </div>
+
+<!-- SUPERSUPERVISOR POPUP -->
+
+    <div class="popup" id="popup3">
+        <div class="popup__content" id="content">
+            <div class="popup__left">
+                <div class="popup__left-3"></div>
+            </div>
+            <div class="popup__right">
+                <a href="#projects" class="popup__close">&times;</a>
+                <h2 class="popup__heading">Super Supervisor</h2>
+
+                <div class="popup__text-button">
+                    <p class="popup__text">Avoid away from your enemies, beat your high-score, and have fun!</p>
+                </div>
+                <a href="https://super-supervisor.netlify.com" target="_blank" class="btn btn--gray">Demo</a>
+                <a href="https://github.com/xrawvelocity/Super-Supervisor-v2" target="_blank" class="btn btn--gray">Code</a>
+            </div>
+        </div>
+    </div>
     
+
+<!-- --------------------------------------- -->
+
+<!-- CONTACT SECTION -->
+
+
     <section class="contact" id="contact">
-      Contact
+      
+        <div class="contact-text">
+            <h1 class="contact-text__title">
+                Want to work with me?
+            </h1>
+            <p class="contact-text__paragraph">
+                Feel free to reach out
+            </p>
+        </div>
+
+        <div class="contact-links">
+            <a href="https://linkedin.com/in/victor--fernandez" target="_blank" class="contact-links__linkedin"></a>
+            <a href="./files/resume.pdf" class="contact-links__resume" download>Download Resume</a>
+            <a href="https://github.com/xrawvelocity" target="_blank" class="contact-links__github"></a>
+        </div>
+
+        <form class="contact-form" action="POST">
+
+            <div class="contact-form-col-1">
+                <div class="contact-form-group">
+                    <label class="contact-form-group__label" for="name">Name</label>
+                    <input class="contact-form-group__input" type="text" name="name" id="name" required/>
+                </div>
+    
+                <div class="contact-form-group">
+                    <label class="contact-form-group__label" for="email">Email</label>
+                    <input class="contact-form-group__input" type="email" name="email" id="email" required/>
+                </div>
+    
+                <div class="contact-form-group">
+                    <label class="contact-form-group__label" for="name">Company/Organization</label>
+                    <input class="contact-form-group__input" type="text" name="name" id="name"/>
+                </div>
+            </div>
+
+            <div class="contact-form-col-2">
+                <div class="contact-form-group">
+                    <label class="contact-form-group__label" for="message">Message</label>
+                    <textarea class="contact-form-group__textarea" name="message" id="message"></textarea>
+                </div>
+                <button class="contact-form-button" type="submit">Submit</button>
+            </div>
+
+
+        </form>
+
     </section>
+
+<!-- ----------------------------------------- -->
+<!-- EXTRAS -->
+
+<!-- SINE WAVE BACKGROUND -->
     <canvas></canvas>
-    <script defer src="./js/canvas.js"></script>
+    
+
+<!-- SCRIPTS TO EXIT POPUP IF CLICKED OUTSIDE -->
+    <script type="text/javascript">
+      var popup = document.querySelector('#popup');
+
+      popup.addEventListener('click', e => {
+          if(e.target.matches('#popup *')) return;
+          else {
+              window.location.hash = "#projects"
+          }
+      });
+
+      var popup2 = document.querySelector('#popup2');
+
+      popup2.addEventListener('click', e => {
+          if(e.target.matches('#popup2 *')) return;
+          else {
+              window.location.hash = "#projects"
+          }
+      });
+
+      var popup3 = document.querySelector('#popup3');
+
+      popup3.addEventListener('click', e => {
+          if(e.target.matches('#popup3 *')) return;
+          else {
+              window.location.hash = "#projects"
+          }
+      });
+    </script>
   </body>
 </html>
