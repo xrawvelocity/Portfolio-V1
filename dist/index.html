@@ -2,52 +2,76 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162917191-1"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-162917191-1"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'UA-162917191-1');
+      gtag("config", "UA-162917191-1");
     </script>
-    
+
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-    <meta name="keywords" content="Portfolio, Web Dev, Web Development">
-    <meta name="author" content="Victor Fernandez">
+    <meta name="keywords" content="Portfolio, Web Dev, Web Development" />
+    <meta name="author" content="Victor Fernandez" />
 
     <!-- Primary Meta Tags -->
     <title>Victor Fernandez - Web Developer</title>
-    <meta name="title" content="Victor Fernandez - Web Developer">
-    <meta name="description" content="Check out my work and reach out!">
+    <meta name="title" content="Victor Fernandez - Web Developer" />
+    <meta name="description" content="Check out my work and reach out!" />
 
     <!-- Open Graph / Facebook -->
     <meta prefix="og: http://ogp.me/ns#" property="og:type" content="website" />
-    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Victor Fernandez - Web Developer" />
-    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Check out my work and reach out!" />
-    <meta prefix="og: http://ogp.me/ns#" property="og:url" content="https://vic-dev.com/" />
-    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://i.ibb.co/6wfmZ1P/portfolioss.png" />
-
+    <meta
+      prefix="og: http://ogp.me/ns#"
+      property="og:title"
+      content="Victor Fernandez - Web Developer"
+    />
+    <meta
+      prefix="og: http://ogp.me/ns#"
+      property="og:description"
+      content="Check out my work and reach out!"
+    />
+    <meta
+      prefix="og: http://ogp.me/ns#"
+      property="og:url"
+      content="https://vic-dev.com/"
+    />
+    <meta
+      prefix="og: http://ogp.me/ns#"
+      property="og:image"
+      content="https://i.ibb.co/6wfmZ1P/portfolioss.png"
+    />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@xrawvelocity" />
     <meta name="twitter:domain" content="https://vic-dev.com/" />
-    <meta name="twitter:title" content="Victor Fernandez - Web Developer"/>
-    <meta name="twitter:description" content="Check out my work and reach out!"/>
-    <meta name="twitter:image" content="https://i.ibb.co/6wfmZ1P/portfolioss.png"/>
+    <meta name="twitter:title" content="Victor Fernandez - Web Developer" />
+    <meta
+      name="twitter:description"
+      content="Check out my work and reach out!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.ibb.co/6wfmZ1P/portfolioss.png"
+    />
 
     <link rel="shortcut icon" href="./images/portfoliologo.png" />
 
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <!-- ------------------------------------------- -->
 
-
-<!-- ------------------------------------------- -->
-
-<!-- NAV BAR -->
+    <!-- NAV BAR -->
 
     <nav class="nav">
       <a href="#projects" class="nav-left">Projects</a>
@@ -55,18 +79,18 @@
       <a href="#contact" class="nav-right">Contact</a>
     </nav>
 
+    <!-- ------------------------------------------- -->
 
-<!-- ------------------------------------------- -->
-
-<!-- ABOUT ME -->
-
-
+    <!-- ABOUT ME -->
 
     <main class="about" id="about">
       <div class="about-main">
         <h1 class="about-main-greeting">Hello!</h1>
-        <h2 class="about-main-name">My name is <br>Victor Fernandez</h2>
-        <h2 class="about-main-description">I am a Full Stack Web Developer with a passion for making creative and result-oriented websites</h2>
+        <h2 class="about-main-name">My name is <br />Victor Fernandez</h2>
+        <h2 class="about-main-description">
+          I am a Full Stack Web Developer with a passion for making creative and
+          result-oriented websites
+        </h2>
       </div>
       <div class="about-picture"></div>
       <a href="#projects" class="arrow">
@@ -76,291 +100,475 @@
       </a>
     </main>
 
+    <!-- ------------------------------------ -->
 
-<!-- ------------------------------------ -->
-
-<!-- PROJECT CARDS -->
-
-
+    <!-- PROJECT CARDS -->
 
     <section class="projects" id="projects">
-
-        <h1 class="projects-title">PROJECTS</h1>
-        <div class="all-cards">
+      <h1 class="projects-title">PROJECTS</h1>
+      <div class="all-cards">
         
+        <!-- 30DAY WORKOUT CARD -->
 
+        <!-- <div class="card-container" id="projects3">
+          <div class="card">
+            <div class="card__side card__side--front">
+              <div class="card__picture card__picture--3">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-image card__heading-image--3"></span>
+                <span class="card__heading-span card__heading-span--3"
+                  >Super Supervisor</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>
+                    HTML Canvas <span class="card__details-logo-html"></span>
+                  </li>
+                  <li>
+                    Phaser3 <span class="card__details-logo-phaser"></span>
+                  </li>
+                  <li>
+                    TiledMapEditor
+                    <span class="card__details-logo-tiled"></span>
+                  </li>
+                  <li>
+                    JavaScript <span class="card__details-logo-js"></span>
+                  </li>
+                  <li>
+                    Adobe Photoshop <span class="card__details-logo-ps"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__side card__side--back card__side--back-3">
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">
+                    Web-based canvas game built with the Phaser 3 library.
+                  </p>
+                </div>
+                <a href="#popup4" id="bookBtn" class="btn btn--white"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+        </div> -->
 
-
-<!-- TRACKTRADE CARD -->
-
+        <!-- TRACKTRADE CARD -->
 
         <div class="card-container" id="projects1">
           <div class="card">
             <div class="card__side card__side--front">
-                <div class="card__picture card__picture--1">
-                    &nbsp;
-                </div>
-                <h4 class="card__heading">
-                    <span class="card__heading-image card__heading-image--1"></span>
-                    <span class="card__heading-span card__heading-span--1">Track Trade</span>
-                </h4>
-                <div class="card__details">
-                    <ul>
-                        <li>MongoDB <span class="card__details-logo-mongo"></span></li>
-                        <li>Express.js <span class="card__details-logo-express"></span></li>
-                        <li>React.js <span class="card__details-logo-react"></span></li>
-                        <li>Node.js <span class="card__details-logo-node"></span></li>
-                        <li>CanvasJSCharts <span class="card__details-logo-canvas"></span></li>
-                    </ul>
-                </div>
+              <div class="card__picture card__picture--1">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-image card__heading-image--1"></span>
+                <span class="card__heading-span card__heading-span--1"
+                  >Track Trade</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>
+                    React.js <span class="card__details-logo-react"></span>
+                  </li>
+                  <li>Redux <span class="card__details-logo-redux"></span></li>
+                  <li>Node.js <span class="card__details-logo-node"></span></li>
+                  <li>
+                    Express.js <span class="card__details-logo-express"></span>
+                  </li>
+                  <li>
+                    MongoDB <span class="card__details-logo-mongo"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="card__side card__side--back card__side--back-1">
-                <div class="card__cta">
-                    <div class="card__price-box">
-                        <p class="card__price-only">Social media for Foreign Exchange Traders that allows
-                            users to visualize their performance using charts.</p>
-                        
-                    </div>
-                    <a href="#popup" id="bookBtn" class="btn btn--white">More Info</a>
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">
+                    Social media for Foreign Exchange Traders that allows users
+                    to visualize their performance using charts.
+                  </p>
                 </div>
+                <a href="#popup" id="bookBtn" class="btn btn--white"
+                  >More Info</a
+                >
+              </div>
             </div>
           </div>
         </div>
 
-
-<!-- LIVESTYLE CARD -->
-
+        <!-- LIVESTYLE CARD -->
 
         <div class="card-container" id="projects2">
           <div class="card">
             <div class="card__side card__side--front">
-                <div class="card__picture card__picture--2">
-                    &nbsp;
-                </div>
-                <h4 class="card__heading">
-                    <span class="card__heading-image card__heading-image--2"></span>
-                    <span class="card__heading-span card__heading-span--2">Live Style</span>
-                </h4>
-                <div class="card__details">
-                    <ul>
-                        <li>React.js <span class="card__details-logo-react"></span></li>
-                        <li>Express.js <span class="card__details-logo-express"></span></li>
-                        <li>SASS <span class="card__details-logo-sass"></span></li>
-                        <li>Cheerio <span class="card__details-logo-cheerio"></span></li>
-                        <li>AJAX <span class="card__details-logo-ajax"></span></li>
-                    </ul>
-                </div>
+              <div class="card__picture card__picture--2">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-image card__heading-image--2"></span>
+                <span class="card__heading-span card__heading-span--2"
+                  >Live Style</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>
+                    React.js <span class="card__details-logo-react"></span>
+                  </li>
+                  <li>
+                    Express.js <span class="card__details-logo-express"></span>
+                  </li>
+                  <li>SASS <span class="card__details-logo-sass"></span></li>
+                  <li>
+                    Cheerio <span class="card__details-logo-cheerio"></span>
+                  </li>
+                  <li>AJAX <span class="card__details-logo-ajax"></span></li>
+                </ul>
+              </div>
             </div>
             <div class="card__side card__side--back card__side--back-2">
-                <div class="card__cta">
-                    <div class="card__price-box">
-                        <p class="card__price-only">Single-page web app built with React. Uses custom
-                            Amazon Web Scrape and YouTube API to recommend
-                            specific videos and products to the users.</p>
-                        
-                    </div>
-                    <a href="#popup2" id="bookBtn" class="btn btn--white">More Info</a>
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">
+                    Single-page web app built with React. Uses custom Amazon Web
+                    Scrape and YouTube API to recommend specific videos and
+                    products to the users.
+                  </p>
                 </div>
+                <a href="#popup2" id="bookBtn" class="btn btn--white"
+                  >More Info</a
+                >
+              </div>
             </div>
           </div>
         </div>
 
-
-
-<!-- SUPERSUPERVISOR CARD -->
-
+        <!-- SUPERSUPERVISOR CARD -->
 
         <div class="card-container" id="projects3">
           <div class="card">
             <div class="card__side card__side--front">
-                <div class="card__picture card__picture--3">
-                    &nbsp;
-                </div>
-                <h4 class="card__heading">
-                    <span class="card__heading-image card__heading-image--3"></span>
-                    <span class="card__heading-span card__heading-span--3">Super Supervisor</span>
-                </h4>
-                <div class="card__details">
-                    <ul>
-                        <li>HTML Canvas <span class="card__details-logo-html"></span></li>
-                        <li>Phaser3 <span class="card__details-logo-phaser"></span></li>
-                        <li>TiledMapEditor <span class="card__details-logo-tiled"></span></li>
-                        <li>JavaScript <span class="card__details-logo-js"></span></li>
-                        <li>Adobe Photoshop <span class="card__details-logo-ps"></span></li>
-                    </ul>
-                </div>
+              <div class="card__picture card__picture--3">
+                &nbsp;
+              </div>
+              <h4 class="card__heading">
+                <span class="card__heading-image card__heading-image--3"></span>
+                <span class="card__heading-span card__heading-span--3"
+                  >Super Supervisor</span
+                >
+              </h4>
+              <div class="card__details">
+                <ul>
+                  <li>
+                    HTML Canvas <span class="card__details-logo-html"></span>
+                  </li>
+                  <li>
+                    Phaser3 <span class="card__details-logo-phaser"></span>
+                  </li>
+                  <li>
+                    TiledMapEditor
+                    <span class="card__details-logo-tiled"></span>
+                  </li>
+                  <li>
+                    JavaScript <span class="card__details-logo-js"></span>
+                  </li>
+                  <li>
+                    Adobe Photoshop <span class="card__details-logo-ps"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="card__side card__side--back card__side--back-3">
-                <div class="card__cta">
-                    <div class="card__price-box">
-                        <p class="card__price-only">Web-based canvas game built with the Phaser 3 library.</p>
-                        
-                    </div>
-                    <a href="#popup3" id="bookBtn" class="btn btn--white">More Info</a>
+              <div class="card__cta">
+                <div class="card__price-box">
+                  <p class="card__price-only">
+                    Web-based canvas game built with the Phaser 3 library.
+                  </p>
                 </div>
+                <a href="#popup3" id="bookBtn" class="btn btn--white"
+                  >More Info</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- HIDDEN POPUPS -->
 
-<!-- HIDDEN POPUPS -->
-
-<!-- TRACKTRADE POPUP -->
+    <!-- TRACKTRADE POPUP -->
     <div class="popup" id="popup">
-        <div class="popup__content" id="content">
-            <div class="popup__left">
-                <div class="popup__left-1"></div>
-            </div>
-            <div class="popup__right">
-                <a href="#project1" class="popup__close">&times;</a>
-                <h2 class="popup__heading">Track Trade</h2>
-
-                <p class="popup__text">Log your trades, analyze charts, share your trades on social media, message other users, and connect with them.<br><br>This project taught me about authentication, creating, reading, updating, and deleting data from databases.</p>
-
-                <div class="popup__text-button">
-                    <a href="https://tracktrade.co/" target="_blank" class="btn btn--gray">Demo</a>
-                    <a href="https://github.com/TrackTraders/TrackTrade" target="_blank" class="btn btn--gray">Code</a>
-                </div>                
-            </div>
+      <div class="popup__content" id="content">
+        <div class="popup__left">
+          <div class="popup__left-1"></div>
         </div>
+        <div class="popup__right">
+          <a href="#project1" class="popup__close">&times;</a>
+          <h2 class="popup__heading">Track Trade</h2>
+
+          <p class="popup__text">
+            Log your trades, analyze charts, share your trades on social media,
+            message other users, and connect with them.<br /><br />This project
+            taught me about authentication, creating, reading, updating, and
+            deleting data from databases.
+          </p>
+
+          <div class="popup__text-button">
+            <a
+              href="https://tracktrade.co/"
+              target="_blank"
+              class="btn btn--gray"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/TrackTraders/TrackTrade"
+              target="_blank"
+              class="btn btn--gray"
+              >Code</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-<!-- LIVESTYLE POPUP -->
+    <!-- LIVESTYLE POPUP -->
 
     <div class="popup" id="popup2">
-        <div class="popup__content" id="content">
-            <div class="popup__left">
-                <div class="popup__left-2"></div>
-            </div>
-            <div class="popup__right">
-                <a href="#project2" class="popup__close">&times;</a>
-                <h2 class="popup__heading">Live Style</h2>
-
-                <p class="popup__text">Implement any lifestyle any lifestyle you want by keeping up with the latest videos and products, save any video or product to access them later, and search through your saved lists.<br><br>This project taught me about APIs and Web Scraping.</p>
-                
-                <div class="popup__text-button">
-                    <a href="https://livestyle.netlify.com" target="_blank" class="btn btn--gray">Demo</a>
-                    <a href="https://github.com/xrawvelocity/LiveStyle" target="_blank" class="btn btn--gray">Code</a>
-                </div>
-            </div>
+      <div class="popup__content" id="content">
+        <div class="popup__left">
+          <div class="popup__left-2"></div>
         </div>
+        <div class="popup__right">
+          <a href="#project2" class="popup__close">&times;</a>
+          <h2 class="popup__heading">Live Style</h2>
+
+          <p class="popup__text">
+            Implement any lifestyle any lifestyle you want by keeping up with
+            the latest videos and products, save any video or product to access
+            them later, and search through your saved lists.<br /><br />This
+            project taught me about APIs and Web Scraping.
+          </p>
+
+          <div class="popup__text-button">
+            <a
+              href="https://livestyle.netlify.com"
+              target="_blank"
+              class="btn btn--gray"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/xrawvelocity/LiveStyle"
+              target="_blank"
+              class="btn btn--gray"
+              >Code</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
-<!-- SUPERSUPERVISOR POPUP -->
+    <!-- SUPERSUPERVISOR POPUP -->
 
     <div class="popup" id="popup3">
-        <div class="popup__content" id="content">
-            <div class="popup__left">
-                <div class="popup__left-3"></div>
-            </div>
-            <div class="popup__right">
-                <a href="#project3" class="popup__close">&times;</a>
-                <h2 class="popup__heading">Super Supervisor</h2>
-
-                <p class="popup__text">Avoid the enemies, beat your high-score, and have fun!<br><br>This project taught me how to work in teams.</p>
-
-                <div class="popup__text-button">
-                    <a href="https://super-supervisor.netlify.com" target="_blank" class="btn btn--gray">Demo</a>
-                    <a href="https://github.com/xrawvelocity/Super-Supervisor-v2" target="_blank" class="btn btn--gray">Code</a>
-                </div>
-            </div>
+      <div class="popup__content" id="content">
+        <div class="popup__left">
+          <div class="popup__left-3"></div>
         </div>
+        <div class="popup__right">
+          <a href="#project3" class="popup__close">&times;</a>
+          <h2 class="popup__heading">Super Supervisor</h2>
+
+          <p class="popup__text">
+            Avoid the enemies, beat your high-score, and have fun!<br /><br />This
+            project taught me how to work in teams.
+          </p>
+
+          <div class="popup__text-button">
+            <a
+              href="https://super-supervisor.netlify.com"
+              target="_blank"
+              class="btn btn--gray"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/xrawvelocity/Super-Supervisor-v2"
+              target="_blank"
+              class="btn btn--gray"
+              >Code</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    
 
-<!-- --------------------------------------- -->
+    <!-- 30DAY WORKOUT POPUP -->
 
-<!-- CONTACT SECTION -->
+    <div class="popup" id="popup4">
+      <div class="popup__content" id="content">
+        <div class="popup__left">
+          <div class="popup__left-3"></div>
+        </div>
+        <div class="popup__right">
+          <a href="#project4" class="popup__close">&times;</a>
+          <h2 class="popup__heading">Super Supervisor</h2>
 
+          <p class="popup__text">
+            Avoid the enemies, beat your high-score, and have fun!<br /><br />This
+            project taught me how to work in teams.
+          </p>
+
+          <div class="popup__text-button">
+            <a
+              href="https://super-supervisor.netlify.com"
+              target="_blank"
+              class="btn btn--gray"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/xrawvelocity/Super-Supervisor-v2"
+              target="_blank"
+              class="btn btn--gray"
+              >Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------------------- -->
+
+    <!-- CONTACT SECTION -->
 
     <section class="contact" id="contact">
-      
-        <div class="contact-text">
-            <h1 class="contact-text__title">
-                Want to work with me?
-            </h1>
-            <p class="contact-text__paragraph">
-                Feel free to reach out
-            </p>
+      <div class="contact-text">
+        <h1 class="contact-text__title">
+          Want to work with me?
+        </h1>
+        <p class="contact-text__paragraph">
+          Feel free to reach out
+        </p>
+      </div>
+
+      <div class="contact-links">
+        <a
+          href="https://linkedin.com/in/victor--fernandez"
+          target="_blank"
+          class="contact-links__linkedin"
+        ></a>
+        <a
+          href="./files/VictorFernandezResume.pdf"
+          class="contact-links__resume"
+          download
+          >Download Resume</a
+        >
+        <a
+          href="https://github.com/xrawvelocity"
+          target="_blank"
+          class="contact-links__github"
+        ></a>
+      </div>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/xjvojgwr"
+        method="POST"
+      >
+        <div class="contact-form-col-1">
+          <div class="contact-form-group">
+            <label class="contact-form-group__label" for="name">Name</label>
+            <input
+              class="contact-form-group__input"
+              type="text"
+              name="name"
+              id="name"
+              required
+            />
+          </div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-group__label" for="email">Email</label>
+            <input
+              class="contact-form-group__input"
+              type="email"
+              name="_replyto"
+              id="email"
+              required
+            />
+          </div>
+
+          <div class="contact-form-group">
+            <label class="contact-form-group__label" for="name"
+              >Company/Organization</label
+            >
+            <input
+              class="contact-form-group__input"
+              type="text"
+              name="company"
+              id="company"
+            />
+          </div>
         </div>
 
-        <div class="contact-links">
-            <a href="https://linkedin.com/in/victor--fernandez" target="_blank" class="contact-links__linkedin"></a>
-            <a href="./files/VictorFernandezResume.pdf" class="contact-links__resume" download>Download Resume</a>
-            <a href="https://github.com/xrawvelocity" target="_blank" class="contact-links__github"></a>
+        <div class="contact-form-col-2">
+          <div class="contact-form-group">
+            <label class="contact-form-group__label" for="message"
+              >Message</label
+            >
+            <textarea
+              class="contact-form-group__textarea"
+              name="message"
+              id="message"
+            ></textarea>
+          </div>
+          <button class="contact-form-button" type="submit">Submit</button>
         </div>
-
-        <form class="contact-form" action="https://formspree.io/xjvojgwr" method="POST">
-
-            <div class="contact-form-col-1">
-                <div class="contact-form-group">
-                    <label class="contact-form-group__label" for="name">Name</label>
-                    <input class="contact-form-group__input" type="text" name="name" id="name" required/>
-                </div>
-    
-                <div class="contact-form-group">
-                    <label class="contact-form-group__label" for="email">Email</label>
-                    <input class="contact-form-group__input" type="email" name="_replyto" id="email" required/>
-                </div>
-    
-                <div class="contact-form-group">
-                    <label class="contact-form-group__label" for="name">Company/Organization</label>
-                    <input class="contact-form-group__input" type="text" name="company" id="company"/>
-                </div>
-            </div>
-
-            <div class="contact-form-col-2">
-                <div class="contact-form-group">
-                    <label class="contact-form-group__label" for="message">Message</label>
-                    <textarea class="contact-form-group__textarea" name="message" id="message"></textarea>
-                </div>
-                <button class="contact-form-button" type="submit">Submit</button>
-            </div>
-
-
-        </form>
-
+      </form>
     </section>
 
-<!-- ----------------------------------------- -->
-<!-- EXTRAS -->
+    <!-- ----------------------------------------- -->
+    <!-- EXTRAS -->
 
-<!-- SINE WAVE BACKGROUND -->
+    <!-- SINE WAVE BACKGROUND -->
 
     <canvas></canvas>
-    
 
-<!-- SCRIPTS TO EXIT POPUP IF CLICKED OUTSIDE -->
+    <!-- SCRIPTS TO EXIT POPUP IF CLICKED OUTSIDE -->
     <script type="text/javascript">
-      var popup = document.querySelector('#popup');
+      var popup = document.querySelector("#popup");
 
-      popup.addEventListener('click', e => {
-          if(e.target.matches('#popup *')) return;
-          else {
-              window.location.hash = "#projects1"
-          }
+      popup.addEventListener("click", (e) => {
+        if (e.target.matches("#popup *")) return;
+        else {
+          window.location.hash = "#projects1";
+        }
       });
 
-      var popup2 = document.querySelector('#popup2');
+      var popup2 = document.querySelector("#popup2");
 
-      popup2.addEventListener('click', e => {
-          if(e.target.matches('#popup2 *')) return;
-          else {
-              window.location.hash = "#projects2"
-          }
+      popup2.addEventListener("click", (e) => {
+        if (e.target.matches("#popup2 *")) return;
+        else {
+          window.location.hash = "#projects2";
+        }
       });
 
-      var popup3 = document.querySelector('#popup3');
+      var popup3 = document.querySelector("#popup3");
 
-      popup3.addEventListener('click', e => {
-          if(e.target.matches('#popup3 *')) return;
-          else {
-              window.location.hash = "#projects3"
-          }
+      popup3.addEventListener("click", (e) => {
+        if (e.target.matches("#popup3 *")) return;
+        else {
+          window.location.hash = "#projects3";
+        }
       });
-
     </script>
   <script type="text/javascript" src="./js/canvas.bundle.js"></script></body>
 </html>

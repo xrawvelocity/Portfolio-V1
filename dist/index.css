@@ -711,8 +711,8 @@ body::-webkit-scrollbar-thumb {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
-    .card__details-logo-canvas {
-      background-image: url("./images/logos/canvasjslogo.jpg");
+    .card__details-logo-redux {
+      background-image: url("./images/logos/reduxlogo.png");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
