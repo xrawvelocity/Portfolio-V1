@@ -450,6 +450,13 @@ body::-webkit-scrollbar-thumb {
       height: 100%;
       background-repeat: no-repeat;
       background-position: center; }
+    .popup__left-4 {
+      background-image: url("./images/fitsocialdemo.gif");
+      background-size: contain;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center; }
     @media only screen and (max-width: 56.25em) {
       .popup__left {
         padding: 6rem 0 0;
@@ -568,6 +575,8 @@ body::-webkit-scrollbar-thumb {
         background-image: linear-gradient(120deg, rgba(51, 51, 51, 0.9), #333333); }
       .card__side--back-3 {
         background-image: linear-gradient(120deg, rgba(5, 142, 151, 0.9), #09757b); }
+      .card__side--back-4 {
+        background-image: linear-gradient(120deg, rgba(35, 35, 35, 0.9), #424342); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -584,6 +593,8 @@ body::-webkit-scrollbar-thumb {
       background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.5), rgba(153, 153, 153, 0.5)), url("./images/livestylebg.png"); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #777, #999), url("./images/officebg.jpg"); }
+    .card__picture--4 {
+      background-image: linear-gradient(to right bottom, #777, #999), url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2397x1600/5ee21529db5b4961f73e697ebe9e215d/photo-1574680096145-d05b474e2155.jpg"); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -629,6 +640,14 @@ body::-webkit-scrollbar-thumb {
         .card__heading-image--3 {
           width: 80px;
           height: 80px; } }
+    .card__heading-image--4 {
+      width: 100px;
+      height: 100px;
+      background-image: url("./images/fitsociallogo.png"); }
+      @media only screen and (max-width: 600px) {
+        .card__heading-image--4 {
+          width: 80px;
+          height: 80px; } }
   .card__heading-span {
     padding: .5rem;
     -webkit-box-decoration-break: clone;
@@ -641,6 +660,9 @@ body::-webkit-scrollbar-thumb {
     .card__heading-span--3 {
       width: 50%;
       background-image: linear-gradient(to right bottom, rgba(5, 142, 151, 0.85), rgba(9, 117, 123, 0.85)); }
+    .card__heading-span--4 {
+      width: 50%;
+      background-image: linear-gradient(to right bottom, rgba(35, 35, 35, 0.85), rgba(66, 67, 66, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -706,6 +728,11 @@ body::-webkit-scrollbar-thumb {
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
+    .card__details-logo-firebase {
+      background-image: url("./images/logos/firebase.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top; }
     .card__details-logo-node {
       background-image: url("./images/logos/nodejslogo.png");
       background-size: contain;

@@ -64,6 +64,10 @@
                 background-image: linear-gradient(120deg, rgba($color-tertiary-light,.9),
                 rgba($color-tertiary-dark,1));
             }
+            &-4 {
+                background-image: linear-gradient(120deg, rgba(#232323,.9),
+                rgba($color-gray-dark-4,1));
+            }
         }
 
     }
@@ -93,6 +97,9 @@
         }
         &--3{
             background-image: linear-gradient(to right bottom, $color-gray-dark, $color-gray-dark-2), url('./images/officebg.jpg');
+        }
+        &--4{
+            background-image: linear-gradient(to right bottom, $color-gray-dark, $color-gray-dark-2), url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2397x1600/5ee21529db5b4961f73e697ebe9e215d/photo-1574680096145-d05b474e2155.jpg");
         }
     }
 
@@ -153,6 +160,17 @@
                 
             }
         }
+        &--4{
+            width: 100px;
+            height: 100px;
+            background-image: url('./images/fitsociallogo.png');
+
+            @include respond(phone){
+                width: 80px;
+                height: 80px;
+                
+            }
+        }
     }
 
     &__heading-span {
@@ -169,6 +187,10 @@
         &--3{
             width: 50%;
             background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+        }
+        &--4{
+            width: 50%;
+            background-image: linear-gradient(to right bottom, rgba(#232323, .85), rgba($color-gray-dark-4, .85));
         }
     }
 
@@ -263,6 +285,13 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
+            }
+
+            &-firebase {
+                background-image: url('./images/logos/firebase.png');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: top;
             }
 
             &-node {
